@@ -1,29 +1,22 @@
 #include <stdio.h>
-#include <stdlib.h>
+
 /**
- * main - main block
- * Description: prints all single digit numbers of base 10
- * starting from 0, followed by a new line.
- * Return: 0
+ * main - Prints numbers between 0 to 9 and letters between a to f.
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	char d = '0';
+  int i;
 
-	while (d <= '9')
-	{
-		putchar(d);
-		d++;
-	}
-
-	char c = 'a';
-
-	while (c <= 'f')
-	{
-		putchar(c);
-		c++;
-	}
-
-	putchar('\n');
-	return (0);
+  for (i = 48; i < 58; i++)
+  {
+    putchar(i);
+  }
+  for (i = 97; i < 103; i++)
+  {
+    putchar(i);
+  }
+  putchar('\n');
+  return (0);
 }
