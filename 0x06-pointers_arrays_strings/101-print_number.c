@@ -2,12 +2,12 @@
 
 int main(void)
 {
-  int n;
-  int a[5];
-  int *p;
-
-  a[2] = 1024;
-  p = &n;
+  int num1 = 1024;
+  int num2 = 402;
+  int num3 = 98;
+  int num4 = 0;
+  int unm5 = -98;
+  
   /*
    * write your line of code here...
    * Remember:
@@ -16,9 +16,17 @@ int main(void)
    * - only one statement
    * - you are not allowed to code anything else than this line of code
    */
-  ;
-  /* ...so that this prints 98\n */
-  printf("a[2] = %d\n", a[2]);
+  
+  printf("%d\n", num1);
+  _putchar("%\n");
+  printf("%d\n", num2);
+  _putchar("%\n");
+  printf("%d\n", num3);
+  _putchar("%\n");
+  printf("%d\n", num4);
+  _putchar("%\n");
+  printf("%d\n", num5);
+  _putchar("%\n");
 
   return (0);
 }
