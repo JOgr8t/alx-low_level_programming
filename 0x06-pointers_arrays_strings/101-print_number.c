@@ -2,7 +2,9 @@
 
 int main(void)
 {
-   /*
+  int number;
+
+  /*
    * write your line of code here...
    * Remember:
    * - you are not allowed to use a
@@ -10,14 +12,12 @@ int main(void)
    * - only one statement
    * - you are not allowed to code anything else than this line of code
    */
-   /* ...so that this prints 98\n */;
-int n;
-  int a[5];
-  int *p;
+  ;
+  /* ...so that this prints 98\n */
+  printf("1024");
 
-  a[2] = 1024;
-  p = &n;
- 
-  printf("a[2] = %d\n", a[2]);
+  // reads and stores input
+  scanf("%", &number);
+
   return (0);
 }
