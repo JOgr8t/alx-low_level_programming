@@ -1,32 +1,35 @@
-#include <stdio.h>
+#include "main.h"
 
-int main(void)
+/**
+ * print_number - prints an integer.
+ * @n: input integer.
+ * Return: no return.
+ */
+void print_number(int n)
 {
-  int num1 = 1024;
-  int num2 = 402;
-  int num3 = 98;
-  int num4 = 0;
-  int unm5 = -98;
-  
-  /*
-   * write your line of code here...
-   * Remember:
-   * - you are not allowed to use a
-   * - you are not allowed to modify p
-   * - only one statement
-   * - you are not allowed to code anything else than this line of code
-   */
-  
-  printf("%d\n", num1);
-  _putchar("%\n");
-  printf("%d\n", num2);
-  _putchar("%\n");
-  printf("%d\n", num3);
-  _putchar("%\n");
-  printf("%d\n", num4);
-  _putchar("%\n");
-  printf("%d\n", num5);
-  _putchar("%\n");
+  unsigned int m, d, count;
 
-  return (0);
+  if (n < 0)
+  {
+    _putchar(45);
+    m = n * -1;
+  }
+  else
+  {
+    m = n;
+  }
+
+  d = m;
+  count = 1;
+
+  while (d > 9)
+  {
+    d /= 10;
+    count *= 10;
+  }
+
+  for (; count >= 1; count /= 10)
+  {
+    _putchar(((m / count) % 10) + 48);
+  }
 }
