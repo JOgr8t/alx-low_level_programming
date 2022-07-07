@@ -1,15 +1,12 @@
 #include <stdio.h>
 
-char *fxname(void *fx) {
-  if (fx == fprintf) return "fprintf";
-  if (fx == gets) return "gets";
-  if (fx == scanf) return "scanf";
-  return "(unknown)";
+void print_name(char *name);
+{   
+       	printf("%s\n", name);
 }
 
-int main(void) {
-  void (*fx)(void);
-  fx = gets; printf("name: %s\n", fxname(fx));
-  fx = putchar; printf("name: %s\n", fxname(fx));
-  return 0;
-}
+int main(){
+
+    void(*ptr)(char*);
+    ptr = print_name;
+   }
