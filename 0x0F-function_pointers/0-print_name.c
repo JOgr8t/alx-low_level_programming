@@ -1,14 +1,19 @@
-#include <stdio.h>
-
-
+#include "function_pointers.h"
 /**
  * print_name - prints a name
- * @name: string
- * @f: function
+ *
+ * @name: pointer to a char
+ * @f: a pointer to function that receives a pointer to char
+ *
+ * Return: void or NULL
  */
-
 void print_name(char *name, void (*f)(char *))
 {
-if (f != NULL)
-	f(name);
+	/* condition for the two pointers they must exist */
+	/* also could be if they are different to NULL */
+	if (name && f)
+		/*de reference the pointer to the function f */
+		/* to the pointer name */
+		/* f receives a char *, and *name is type char */
+		f(name);
 }
