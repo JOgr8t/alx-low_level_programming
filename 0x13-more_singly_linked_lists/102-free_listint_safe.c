@@ -1,5 +1,6 @@
 #include "lists.h"
-
+#include <stdio.h>
+#include <stdlib.h>
 /**
  * free_listint_safe - thsi function free a list in safe mode
  * @h: the head of list
