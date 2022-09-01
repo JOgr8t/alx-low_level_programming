@@ -1,3 +1,4 @@
+
 #include "lists.h"
 
 /**
@@ -10,29 +11,29 @@
  */
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
+	dlistint_t *new;
 	dlistint_t *y;
-	dlistint_t *z;
 
-	y = malloc(sizeof(dlistint_t));
-	if (y == NULL)
+	new = malloc(sizeof(dlistint_t));
+	if (new == NULL)
 		return (NULL);
 
-	y->n = n;
+	new->n = n;
 	new->prev = NULL;
-	z = *head;
+	y = *head;
 
-	if (z != NULL)
+	if (y != NULL)
 	{
-		while (z->prev != NULL)
-			z = z->prev;
+		while (y->prev != NULL)
+			y = y->prev;
 	}
 
-	y->next = z;
+	new->next = y;
 
-	if (z != NULL)
-		z->prev = y;
+	if (y != NULL)
+		y->prev = new;
 
-	*head = y;
+	*head = new;
 
-	return (y);
+	return (new);
 }
